@@ -8,14 +8,11 @@ const elWeatherbtn = document.querySelector(".weather__btn");
 
 const renderCountry = function (data) {
   const html = `
-  <h2 class="weather__country">${data.name}</h2>
+  <h2 class="weather__country">City: ${data.name}</h2>
   <h3 class="weather__country-short">Country: ${data.sys.country}</h3>
-  <p class="weather__temperatura">${data.main.temp} °C</p>
+  <p class="weather__temperatura">Temperatura: ${data.main.temp} °C</p>
   <p class="weather__speed">Speed: ${data.wind.speed} m/s</p>
   `;
-
-  console.log(data);
-
   elResult.innerHTML = null;
   elResult.insertAdjacentHTML("beforeend", html);
 };
